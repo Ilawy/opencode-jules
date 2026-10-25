@@ -1,0 +1,42 @@
+{
+  "name": "opencode-jules-delegate",
+  "version": "1.0.0",
+  "description": "OpenCode plugin and MCP server to delegate heavy, time-consuming coding tasks to Google Jules with a 75% daily quota guardrail",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "type": "module",
+  "bin": {
+    "jules-oc": "./bin/cli.ts",
+    "jules-mcp": "./src/mcp-server.ts"
+  },
+  "scripts": {
+    "test": "bun test",
+    "check": "bun check",
+    "mcp": "bun run src/mcp-server.ts",
+    "cli": "bun run bin/cli.ts",
+    "quota": "bun run bin/cli.ts quota"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@opencode-ai/plugin": "^1.19.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "mcp",
+    "model-context-protocol",
+    "jules",
+    "google-jules",
+    "ai-agent",
+    "delegation"
+  ],
+  "license": "Apache-2.0"
+}

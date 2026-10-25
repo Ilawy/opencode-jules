@@ -1,0 +1,35 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  
+  // Option A: Enable as a Native OpenCode Plugin
+  // OpenCode auto-discovers plugins in `.opencode/plugins/` or you can declare paths / npm packages:
+  "plugins": [
+    "./.opencode/plugins/jules.ts"
+  ],
+
+  // Option B: Enable as a Model Context Protocol (MCP) Server
+  // Use this if you prefer running via MCP stdio transport:
+  "mcp": {
+    "servers": {
+      "jules": {
+        "type": "local",
+        "command": ["bun", "run", "./src/mcp-server.ts"],
+        "cwd": ".",
+        "environment": {
+          "JULES_API_KEY": "{env:JULES_API_KEY}",
+          "JULES_TIER": "base"
+        },
+        "enabled": true
+      }
+    }
+  },
+
+  // Tool permissions: automatically allow status/quota checks, ask before delegating
+  "permission": {
+    "jules_get_quota": "allow",
+    "jules_check_session": "allow",
+    "jules_list_sessions": "allow",
+    "jules_list_sources": "allow",
+    "jules_delegate": "ask"
+  }
+}
