@@ -5,4 +5,4 @@ export * from "./quota-manager.js";
 export * from "./git-context.js";
 export * from "./decision-engine.js";
 export * from "./delegation-service.js";
-export { JulesDelegationPlugin, default } from "./plugin.js";
+export { default } from "./plugin.js";
