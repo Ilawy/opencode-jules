@@ -31,5 +31,22 @@
     "jules_list_sessions": "allow",
     "jules_list_sources": "allow",
     "jules_delegate": "ask"
-  }
+  },
+
+  // Option C: ntfy.sh notification MCP server
+  // "mcp": {
+  //   "servers": {
+  //     "ntfy": {
+  //       "type": "local",
+  //       "command": ["bun", "run", "./src/ntfy-mcp-server.ts"],
+  //       "cwd": ".",
+  //       "environment": {
+  //         "NTFY_SERVER_URL": "https://ntfy.sh",
+  //         "NTFY_TOPIC": "my-topic",
+  //         "NTFY_TOKEN": "{env:NTFY_TOKEN}"
+  //       },
+  //       "enabled": true
+  //     }
+  //   }
+  // }
 }

@@ -8,14 +8,18 @@
   "type": "module",
   "bin": {
     "jules-oc": "./bin/cli.ts",
-    "jules-mcp": "./src/mcp-server.ts"
+    "jules-mcp": "./src/mcp-server.ts",
+    "ntfy-oc": "./bin/ntfy.ts",
+    "ntfy-mcp": "./src/ntfy-mcp-server.ts"
   },
   "scripts": {
     "test": "bun test",
     "check": "bun check",
     "mcp": "bun run src/mcp-server.ts",
     "cli": "bun run bin/cli.ts",
-    "quota": "bun run bin/cli.ts quota"
+    "quota": "bun run bin/cli.ts quota",
+    "ntfy:mcp": "bun run src/ntfy-mcp-server.ts",
+    "ntfy": "bun run bin/ntfy.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
